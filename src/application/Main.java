@@ -1,6 +1,7 @@
 package application;
 
 import java.sql.Connection;
+import java.util.Date;
 
 import db.DB;
 import model.entities.Department;
@@ -10,8 +11,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		Connection conn = DB.getConnection();
-		Department dep = new Department();
-		Seller slr = new Seller();
+		Department dep = new Department(1, "Books");
+		Seller slr = new Seller(1, "Reinaldo Almeida de Jesus", "reinaldojesus238@gnail.com", new Date(), 23500.0, dep);
 		
 		
 		System.out.println(dep);
